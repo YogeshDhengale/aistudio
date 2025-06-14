@@ -38,7 +38,7 @@ const AnimatedInputUI = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             className="flex-1 text-primary text-lg outline-none bg-transparent placeholder-transparent"
-            placeholder={placeholders[currentPlaceholder]}
+            placeholder={placeholders[currentPlaceholder] || "Start typing a prompt"}
           />
 
           {/* Animated placeholder */}

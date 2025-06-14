@@ -58,11 +58,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <SidebarGroup className="hidden md:block">
           <SidebarGroup
-            className={cn("gap-2", pathname === "/dashboard" && "hidden")}
+            className={cn("gap-2 p-0", pathname === "/dashboard" && "hidden")}
           >
             <StudioItems pathname={pathname} />
           </SidebarGroup>
-          <SidebarGroup className={cn("gap-2", pathname === "/" && "hidden")}>
+          <SidebarGroup className={cn("gap-2 p-0", pathname === "/" && "hidden")}>
             <DashboardItems pathname={pathname} />
           </SidebarGroup>
         </SidebarGroup>
