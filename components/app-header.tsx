@@ -37,7 +37,7 @@ const AppHeader = () => {
         </div>
         {/* nav for small screens as well as spacer */}
         <div className="flex-1">
-          <div className="flex items-center gap-2 md:hidden">
+          <div className={cn("flex items-center gap-2 md:hidden", pathName !== "/" && "hidden")}>
             <div className="flex-1">
               <ModelVersionDropdown />
             </div>
