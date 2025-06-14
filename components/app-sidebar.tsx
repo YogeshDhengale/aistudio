@@ -25,6 +25,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubItem,
   SidebarTrigger,
+  // useSidebar,
 } from "@/components/ui/sidebar";
 import Logo from "./Icons/logo";
 import Link from "next/link";
@@ -37,6 +38,7 @@ import {
   CollapsibleTrigger,
 } from "./ui/collapsible";
 import DriveAdd from "./Icons/drive-add";
+import GoogleLogo from "./Icons/google-logo";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const pathname = usePathname();
@@ -47,10 +49,13 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           size="lg"
           className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
         >
-          <div className="text-sidebar-primary-foreground flex aspect-square size-12 items-center justify-center rounded-lg">
+          <div className="data-[state=open]:hidden group-data-[collapsible=]:hidden group-data-[collapsible=icon]:block text-primary text-3xl hidden md:flex aspect-square size-12 items-center justify-center rounded-lg">
             <Logo className="size-8" />
           </div>
-          <div className="grid flex-1 text-left text-sm leading-tight">
+          <div className={cn("group-data-[collapsible=icon]:hidden text-3xl text-primary")}>
+            <GoogleLogo />
+          </div>
+          <div className="grid flex-1 text-left text-xl leading-tight">
             <span className="truncate font-medium">AI Studio</span>
           </div>
         </SidebarMenuButton>
@@ -62,7 +67,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           >
             <StudioItems pathname={pathname} />
           </SidebarGroup>
-          <SidebarGroup className={cn("gap-2 p-0", pathname === "/" && "hidden")}>
+          <SidebarGroup
+            className={cn("gap-2 p-0", pathname === "/" && "hidden")}
+          >
             <DashboardItems pathname={pathname} />
           </SidebarGroup>
         </SidebarGroup>
@@ -99,7 +106,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <SidebarTrigger />
+        <div className="absolute bg-background bottom-6 right-0 p-1 z-50 rounded-l-full hidden md:block">
+          <SidebarTrigger className="rounded-full" />
+        </div>
       </SidebarFooter>
     </Sidebar>
   );

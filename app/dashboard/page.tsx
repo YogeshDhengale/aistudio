@@ -34,7 +34,7 @@ export default function Page() {
         </div>
       </div>
       <div className="px-5 pt-4">
-        <h3 className="text-base text-muted-foreground font-medium">
+        <h3 className="text-base text-primary font-medium">
           Quickly test the Gemini API
         </h3>
       </div>
@@ -77,8 +77,8 @@ export default function Page() {
             Your API keys are listed below. You can also view and manage your
             project and API keys in Google Cloud.
           </p>
-          <div className="rounded-lg border border-gray-200 bg-white overflow-hidden">
-            <table className="w-full">
+          <div className="rounded-lg border border-gray-200 bg-white overflow-auto">
+            <table className="w-full min-w-max">
               <thead>
                 <tr className="bg-[#edf2fa] dark:bg-[#393939] border-b border-gray-200">
                   <th className="text-left font-medium text-gray-700 py-4 px-6 text-sm">
