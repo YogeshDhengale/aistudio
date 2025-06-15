@@ -47,9 +47,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenuButton
           size="lg"
-          className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+          className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground rounded-full"
         >
-          <div className="data-[state=open]:hidden group-data-[collapsible=]:hidden group-data-[collapsible=icon]:block text-primary text-3xl hidden md:flex aspect-square size-12 items-center justify-center rounded-lg">
+          <div className="data-[state=open]:hidden group-data-[collapsible=]:hidden group-data-[collapsible=icon]:flex text-primary text-3xl hidden md:flex aspect-square size-12 items-center justify-center rounded-lg">
             <Logo className="size-8" />
           </div>
           <div className={cn("group-data-[collapsible=icon]:hidden text-3xl text-primary")}>
