@@ -1,5 +1,4 @@
 # Ai studio
-Data hat assignment
 
 ## 🚀 Project Setup
 Follow these steps to set up and run the project locally:
